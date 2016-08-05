@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -x
+
+function test_function
+{
+  set -e
+  false
+  return 0
+}
+
+if ! eval test_function; then
+  exit 1
+else
+  exit 0
+fi

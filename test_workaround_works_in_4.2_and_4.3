@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -x
+
+function test_function
+{
+  set -e
+  false
+  return 0
+}
+
+eval test_function
